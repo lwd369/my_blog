@@ -2,7 +2,6 @@
 lock "3.7.1"
 
 set :application, "my_blog"
-set :scm, :git
 set :repo_url, "https://github.com/lwd369/my_blog.git"
 set :branch, :master
 set :deploy_to, "/var/www/my_blog"

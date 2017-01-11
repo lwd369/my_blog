@@ -1,0 +1,27 @@
+// Place all the styles related to the staticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#noAvailable {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #D84315, #FF8A65); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2 {
+  color: #fff;
+}
+
+h2 {
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 3.5em;
+}
+
