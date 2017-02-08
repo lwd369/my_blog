@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'static_pages#not_available'
-  get '/index', to: 'static_pages#index_sample'
+  root 'home#index'
   # get '*path', to: redirect('/')
+  resources :blogs
 end
