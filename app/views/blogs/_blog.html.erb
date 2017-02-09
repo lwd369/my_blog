@@ -1,5 +1,5 @@
-<div id="blog_id_<%= blog.id %>">
-  <h3><%= blog.title %></h3>
+<article id="blog_id_<%= blog.id %>" class="blog-post">
+  <%= link_to blog.title, blog, class:"blog-post-title"%>
   <p><%= blog.content %></p>
   <p><%= blog.created_at %></p>
-</div>
+</article>

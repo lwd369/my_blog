@@ -71,3 +71,23 @@
     color: #FFF;
   }
 }
+
+.main-container {
+  width: 900px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: lightseagreen;
+}
+
+.main-container::after, .main-container::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left-article {
+  width: 66.6666667%;
+  float: left;
+  background-color: blueviolet;
+  padding: 15px;
+}

@@ -464,3 +464,12 @@ template {
 [hidden] {
   display: none;
 }
+
+a:visited {
+  text-decoration: none;;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
