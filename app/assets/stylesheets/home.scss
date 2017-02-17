@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$container-width: 980px;
+
 #noAvailable {
   width: 100vw;
   height: 100vh;
@@ -73,16 +75,17 @@
 }
 
 .main-container {
-  width: 900px;
+  width: $container-width;
   margin: auto;
   margin-top: 20px;
   background-color: lightseagreen;
-}
 
-.main-container::after, .main-container::before {
-  content: "";
-  display: table;
-  clear: both;
+  &::after, &::before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 }
 
 .left-article {

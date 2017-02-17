@@ -5,13 +5,32 @@
   border: 1px dashed lightcoral;
 
   a.blog-post-title {
-    display: block;
+    display: inline-block;
     padding-top: 15px;
     padding-bottom: 15px; 
     color: lightgreen;
+    font-size: 20px;
   }
 
   a.blog-post-title:hover {
       color: palevioletred;
+  }
+
+  .blog-post-content {
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 25px;
+  }
+
+  .post-info {
+    font-size: 15px;
+
+    .meta-info {
+      margin-right: 15px;
+    }
+
+    .octicon {
+      fill: lightgray;
+    }
   }
 }
