@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .blog-post {
-  border: 1px dashed lightcoral;
+  // border: 1px dashed lightcoral;
+  border-bottom: 1px solid lightgrey;
 
   a.blog-post-title {
     display: inline-block;

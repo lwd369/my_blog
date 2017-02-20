@@ -86,11 +86,31 @@ $container-width: 980px;
     clear: both;
   }
 
+  .left-article {
+    width: 66.6666667%;
+    float: left;
+    background-color: blueviolet;
+    padding: 15px;
+  }
+
+  .right-profile {
+    width: calc(33.3333% - 30px);
+    float: right;
+    background-color: goldenrod;
+  }
 }
 
-.left-article {
-  width: 66.6666667%;
-  float: left;
-  background-color: blueviolet;
-  padding: 15px;
+#about-me {
+  .avater {
+    width: 100%;
+    height: auto;
+  }
+}
+
+footer {
+  clear: both;
+
+  .main-container {
+    margin-top: 0;
+  }
 }
