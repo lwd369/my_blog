@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'blogs#index'
   # get '*path', to: redirect('/')
   resources :blogs
 end

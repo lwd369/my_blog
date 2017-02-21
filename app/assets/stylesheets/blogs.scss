@@ -31,3 +31,59 @@
     }
   }
 }
+
+.column {
+  float: left;
+  padding: 15px;
+}
+
+.two-third {
+  width: 66.6666667%;
+  background-color: blueviolet;
+}
+
+.one-third {
+  width: 33.3333333%;
+  background-color: goldenrod;
+}
+
+#profile {
+  padding: 0 15px;
+
+  .avater {
+    width: 100%;
+    height: auto;
+  }
+
+  .intro {
+    text-align: center;
+    font-size: 0.8em;
+    color: black;
+    padding: 0 10px;
+  }
+}
+
+.list-inline {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: inline-block;
+  }
+
+  li.a {
+    color: currentColor;
+  }
+}
+
+.social-list {
+    @extend .list-inline;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  li {
+    margin-right: 20px;
+  }
+}

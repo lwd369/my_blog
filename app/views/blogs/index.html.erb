@@ -1,1 +1,12 @@
-<%= render @blogs %>
+<div id="banner">
+  <h2>This is my HOUSE</h2>
+</div>
+
+<div class="container clearfix">
+  <div class="column two-third">
+    <%= render @blogs%>
+  </div>
+  <div class="column one-third">
+    <%= render 'about_me' %>
+  </div>
+</div>
