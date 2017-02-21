@@ -1,0 +1,14 @@
+<div class="container">
+  <%= form_for @blog, html:{class: 'ui form'} do |f| %>
+    <div class="field">
+      <%= f.label :title, '标题' %>
+      <%= f.text_field :title, html: {placeholer: '标题'} %>
+    </div>
+
+    <div class="field">
+      <%= f.label :content, '正文' %>
+      <%= f.text_area :content, rows:40, cols:50 %>
+    </div>
+    <%= f.submit '保存' %>
+  <% end %>
+</div>
