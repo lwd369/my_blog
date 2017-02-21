@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'octicons_helper'
 gem 'font-awesome-sass'
 gem 'rails-assets-semantic', source: 'https://rails-assets.org'
+gem 'redcarpet'
+gem 'coderay'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
