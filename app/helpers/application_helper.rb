@@ -14,7 +14,7 @@ module ApplicationHelper
 
     markdown = Redcarpet::Markdown.new(HTMLwithCodeRay, extensions)
 
-    markdown.render(h(text)).html_safe
+    markdown.render(text).html_safe
   end
 
   class HTMLwithCodeRay < Redcarpet::Render::HTML
