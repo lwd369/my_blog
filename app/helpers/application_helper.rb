@@ -4,6 +4,10 @@ module ApplicationHelper
     content_for :title, page_title.to_s
   end
 
+  def banner_title(title)
+    content_for :banner_title, title
+  end
+
   def markdown(text)
     extensions = {
       autolink:           true,

@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170208131047) do
+ActiveRecord::Schema.define(version: 20170222142458) do
 
   create_table "blogs", force: :cascade do |t|
-    t.string   "title",      limit: 100,                 null: false
+    t.string   "title",        limit: 100,                 null: false
     t.text     "content"
-    t.boolean  "is_draft",               default: true
-    t.boolean  "is_public",              default: false
-    t.integer  "read_count",             default: 0
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.boolean  "is_draft",                 default: true
+    t.boolean  "is_public",                default: false
+    t.integer  "read_count",               default: 0
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.string   "banner_image"
   end
 
 end
