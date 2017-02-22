@@ -16,6 +16,7 @@
  */
 
 @import "octicons";
+@import "markdown";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -93,7 +94,7 @@ footer {
 }
 
 .container {
-  width: $container-width;
+  max-width: $container-width;
   margin: auto;
 }
 
