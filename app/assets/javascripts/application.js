@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require semantic
+//= require simplemde.min
 //= require_tree .
