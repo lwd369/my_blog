@@ -1,6 +1,6 @@
 <article id="blog_id_<%= blog.id %>" class="blog-post">
   <%= link_to blog.title, blog, class:"blog-post-title"%>
-  <p class="blog-post-content"><%= blog.content %></p>
+  <p class="blog-post-content"><%= blog.content_summary %></p>
   <p class="post-info">
     <span class="meta-info">
       <%= octicon 'calendar', height: 16 %>
