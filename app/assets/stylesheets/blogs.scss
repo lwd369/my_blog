@@ -86,3 +86,20 @@
     margin-right: 20px;
   }
 }
+
+#image-modal {
+  position: fixed;
+  background-color: greenyellow;
+  width: 350px;
+  height: 250px;
+  border: 1px dashed red;
+  top: calc(50% - 125px);
+  left: calc(50% - 175px);
+  display: block;
+  margin: 0 auto;
+  z-index: 999;
+}
+
+.hidden {
+  display: none !important;
+}

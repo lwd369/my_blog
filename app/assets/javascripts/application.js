@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require semantic
 //= require simplemde.min
+//= require plugins/plupload/moxie
+//= require plugins/plupload/plupload.full.min
+//= require plugins/qiniu/qiniu
 //= require_tree .

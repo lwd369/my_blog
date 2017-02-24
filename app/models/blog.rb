@@ -7,7 +7,7 @@ class Blog < ApplicationRecord
   def create_date
     created_at.to_date
   end
-
+  
 
   def save_content_summary
     self.content_summary = content.split("\n")[0]

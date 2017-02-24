@@ -4,6 +4,17 @@
       <%= f.label :title, '标题' %>
       <%= f.text_field :title, html: {placeholer: '标题'} %>
     </div>
+    
+    <div class="field">
+      <%= f.button '图片', type: 'button', id: 'upload-btn' %>
+    </div>
+
+    <div id="image-modal" class='modal hidden'>
+      <h4>图片上传</h4>
+      <button type='button' id='upload'>上传</button>
+      <label> 图片链接</label>
+      <input type="text">
+    </div>
 
     <div class="field">
       <%= f.label :content, '正文' %>
