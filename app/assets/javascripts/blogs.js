@@ -4,32 +4,22 @@
   $('#upload-btn').on('click', function() {
     $('#image-modal').toggleClass('hidden');
   });
-})()
 
-$(function() {
   var uploader = Qiniu.uploader({
         runtimes: 'html5,flash,html4',      // 上传模式，依次退化
         browse_button: 'upload',         // 上传选择的点选按钮，必需
-        // 在初始化时，uptoken，uptoken_url，uptoken_func三个参数中必须有一个被设置
-        // 切如果提供了多个，其优先级为uptoken > uptoken_url > uptoken_func
-        // 其中uptoken是直接提供上传凭证，uptoken_url是提供了获取上传凭证的地址，如果需要定制获取uptoken的过程则可以设置uptoken_func
-        // uptoken : '<Your upload token>', // uptoken是上传凭证，由其他程序生成
         uptoken_url: '/uptoken',         // Ajax请求uptoken的Url，强烈建议设置（服务端提供）
-        // uptoken_func: function(file){    // 在需要获取uptoken时，该方法会被调用
-        //    // do something
-        //    return uptoken;
-        // },
         get_new_uptoken: false,             // 设置上传文件的时候是否每次都重新获取新的uptoken
         // downtoken_url: '/downtoken',
         domain: 'oltnwd3eq.bkt.clouddn.com',     // bucket域名，下载资源时用到，必需
         container: 'image-modal',             // 上传区域DOM ID，默认是browser_button的父元素
         max_file_size: '100mb',             // 最大文件体积限制
-        flash_swf_url: 'path/of/plupload/Moxie.swf',  //引入flash，相对路径
         max_retries: 3,                     // 上传失败最大重试次数
         dragdrop: true,                     // 开启可拖曳上传
-        drop_element: 'container',          // 拖曳上传区域元素的ID，拖曳文件或文件夹后可触发上传
+        drop_element: 'image-modal',          // 拖曳上传区域元素的ID，拖曳文件或文件夹后可触发上传
         chunk_size: '4mb',                  // 分块上传时，每块的体积
         auto_start: true,                   // 选择文件后自动上传，若关闭需要自己绑定事件触发上传
+        unique_names: true,
         //x_vars : {
         //    查看自定义变量
         //    'time' : function(up,file) {
@@ -64,8 +54,9 @@ $(function() {
                   //  }
                   // 查看简单反馈
                   // var domain = up.getOption('domain');
-                  // var res = parseJSON(info);
+                   var res = $.parseJSON(info);
                   // var sourceLink = domain +"/"+ res.key; 获取上传成功后的文件的Url
+                  console.log(res.key);
             },
             'Error': function(up, err, errTip) {
                   //上传出错时，处理相关的事情
@@ -85,4 +76,4 @@ $(function() {
     // domain为七牛空间对应的域名，选择某个空间后，可通过 空间设置->基本设置->域名设置 查看获取
     // uploader为一个plupload对象，继承了所有plupload的方法
 
-});
+})()
