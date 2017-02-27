@@ -89,15 +89,32 @@
 
 #image-modal {
   position: fixed;
-  background-color: greenyellow;
-  width: 350px;
-  height: 250px;
-  border: 1px dashed red;
-  top: calc(50% - 125px);
-  left: calc(50% - 175px);
+  background-color: white;
+  width: 400px;
+  height: 200px;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.5);
+  top: calc(50% - 100px);
+  left: calc(50% - 200px);
   display: block;
   margin: 0 auto;
   z-index: 999;
+
+  h3 {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  #upload, #cancel {
+    width: 80%;
+    height: 50px;
+    border: none;
+    background-color: #555;
+    color: white;
+    display: block;
+    margin: 5px auto;
+    font-size: 1.2em;
+  }
+  
 }
 
 .hidden {

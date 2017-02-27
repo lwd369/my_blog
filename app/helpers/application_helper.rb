@@ -15,6 +15,11 @@ module ApplicationHelper
     content_for :banner_title, title
   end
 
+  def banner_image(blog)
+    return "http://oltnwd3eq.bkt.clouddn.com/#{blog.banner_image}" if blog.class == Blog && !blog.banner_image.nil?
+    return image_url('banner.jpg')
+  end
+
   def markdown(text)
     extensions = {
       autolink:           true,

@@ -1,7 +1,7 @@
 (function() {
   var simplemde = new SimpleMDE({ element: document.getElementById("markdown-editor"), spellChecker: false});
 
-  $('#upload-btn').on('click', function() {
+  $('#upload-btn, #cancel').on('click', function() {
     $('#image-modal').toggleClass('hidden');
   });
 
@@ -10,7 +10,6 @@
         browse_button: 'upload',         // 上传选择的点选按钮，必需
         uptoken_url: '/uptoken',         // Ajax请求uptoken的Url，强烈建议设置（服务端提供）
         get_new_uptoken: false,             // 设置上传文件的时候是否每次都重新获取新的uptoken
-        // downtoken_url: '/downtoken',
         domain: 'oltnwd3eq.bkt.clouddn.com',     // bucket域名，下载资源时用到，必需
         container: 'image-modal',             // 上传区域DOM ID，默认是browser_button的父元素
         max_file_size: '100mb',             // 最大文件体积限制
@@ -41,9 +40,11 @@
             },
             'BeforeUpload': function(up, file) {
                   // 每个文件上传前，处理相关的事情
+                  console.log('BeforeUpload');
             },
             'UploadProgress': function(up, file) {
                   // 每个文件上传时，处理相关的事情
+                  console.log('UploadProgress');
             },
             'FileUploaded': function(up, file, info) {
                   // 每个文件上传成功后，处理相关的事情
@@ -57,6 +58,8 @@
                    var res = $.parseJSON(info);
                   // var sourceLink = domain +"/"+ res.key; 获取上传成功后的文件的Url
                   console.log(res.key);
+                  $('#image-modal').toggleClass('hidden');
+                  $('#banner-image-field').val(res.key);
             },
             'Error': function(up, err, errTip) {
                   //上传出错时，处理相关的事情

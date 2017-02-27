@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock "3.7.1"
+lock "3.7.2"
 
 set :application, "my_blog"
 set :repo_url, "https://github.com/lwd369/my_blog.git"

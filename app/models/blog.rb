@@ -8,8 +8,13 @@ class Blog < ApplicationRecord
     created_at.to_date
   end
   
+  private
 
   def save_content_summary
     self.content_summary = content.split("\n")[0]
+  end
+
+  def add_qiniu_header
+    
   end
 end
