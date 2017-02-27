@@ -13,5 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require semantic
-//= require simplemde.min
-//= require_tree .
+//= require_tree ./shared

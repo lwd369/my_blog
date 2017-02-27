@@ -1,5 +1,12 @@
 module ApplicationHelper
 
+  def blogs_new_page?(params)
+    if params[:controller] == 'blogs' && params[:action] == 'new'
+      return true
+    end
+    return false
+  end
+
   def title(page_title)
     content_for :title, page_title.to_s
   end

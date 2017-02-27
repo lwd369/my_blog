@@ -4,10 +4,13 @@
     <title><%= yield(:title) %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <script src='https://cdn.staticfile.org/plupload/2.1.8/plupload.full.min.js'></script>
-    <script src='https://cdn.staticfile.org/qiniu-js-sdk/1.0.14-beta/qiniu.js'></script>
+
+    <% if blogs_new_page? params %>
+      <%= javascript_include_tag 'plupload.full.min'%>
+      <%= javascript_include_tag 'qiniu.min' %>
+      <%= javascript_include_tag 'simplemde.min' %>
+    <% end %>
   </head>
 
   <body>
