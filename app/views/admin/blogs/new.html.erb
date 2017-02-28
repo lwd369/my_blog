@@ -1,0 +1,27 @@
+<div class="container">
+  <%= form_for @blog, html:{class: 'ui form'} do |f| %>
+    <div class="field">
+      <%= f.label :title, '标题' %>
+      <%= f.text_field :title, placeholder: '标题' %>
+    </div>
+
+    <div class="field">
+      <div class="ui action input">
+        <%= f.text_field :banner_image, placeholder: '上传图片或复制连接', id: 'banner-image-field' %>
+        <%= f.button '上传图片', type: 'button', id: 'upload-btn', class: 'ui button' %>
+      </div>
+    </div>
+
+    <div id="image-modal" class='modal hidden'>
+      <h3>点击按钮或拖拽图片直本区域</h3>
+      <button type='button' id='upload'>点击上传</button>
+      <button type='button' id='cancel'>取消</button>
+    </div>
+
+    <div class="field">
+      <%= f.label :content, '正文' %>
+      <%= f.text_area :content, rows:40, cols:50, id: 'markdown-editor' %>
+    </div>
+    <%= f.submit '保存' %>
+  <% end %>
+</div>
