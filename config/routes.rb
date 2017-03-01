@@ -12,7 +12,11 @@ Rails.application.routes.draw do
     end
   end
 
-  namespace :api do
-    get '/uptoken', to: 'qiniu_manager#uptoken'
+  constraints subdomain: 'api' do
+    namespace :api, path: '/' do
+      get '/uptoken', to: 'qiniu_manager#uptoken'
+    end
   end
+
+
 end
