@@ -1,4 +1,6 @@
 class SessionsController < Clearance::SessionsController
+  layout "session"
+
   def create
     @user = authenticate(params)
 
@@ -11,5 +13,10 @@ class SessionsController < Clearance::SessionsController
         render template: "sessions/new", status: :unauthorized
       end
     end
+  end
+
+  def new
+    render template: "sessions/new"
+    puts 'override...'
   end
 end
