@@ -1,4 +1,4 @@
-<%= form_for :session, url: session_path, html:{class: 'ui form'} do |form| %>
+<%= form_for :session, url: session_path, html:{class: 'ui form login'} do |form| %>
   <div id="flash">
     <% flash.each do |key, value| %>
       <div class="flash <%= key %>"><%= value %></div>

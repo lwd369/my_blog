@@ -1,0 +1,16 @@
+<div id="clearance" class="sign-up">
+  <h2>新用户注册</h2>
+  <div id="login-form">
+    <%= form_for @user, html: {class: 'ui form login'} do |form| %>
+      <%= render partial: '/users/form', object: form %>
+
+      <div class="field">
+        <%= form.submit '注册', class: 'login-btn' %>
+      </div>
+
+      <div class="field">
+        <%= link_to t(".sign_in"), sign_in_path %>
+      </div>
+    <% end %>
+  </div>
+</div>
