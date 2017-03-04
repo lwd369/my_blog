@@ -17,6 +17,5 @@ class SessionsController < Clearance::SessionsController
 
   def new
     render template: "sessions/new"
-    puts 'override...'
   end
 end

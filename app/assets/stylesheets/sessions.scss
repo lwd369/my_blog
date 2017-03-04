@@ -1,0 +1,43 @@
+#session {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: image-url('loginBg.jpg');
+  background-position: center;
+}
+
+#clearance {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: #FFF;
+  border-radius: 10px;
+  overflow: hidden;
+
+  h2 {
+    padding: 50px;
+    background-color: #1BBC9B;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFF;
+  }
+
+  #login-form {
+    width: 70%;
+    margin: 0 auto;
+
+    .login-btn {
+      width: 100%;
+      height: 30px;
+      background-color: #1BBC9B;
+      color: white;
+      border: none;
+    }
+
+  }
+}
+
+#login-form input[type='text_field'] {
+  background-color: rgb(242, 242, 242);
+}
