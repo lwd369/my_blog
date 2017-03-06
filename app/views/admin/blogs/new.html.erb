@@ -1,5 +1,5 @@
 <div class="container">
-  <%= form_for @blog, html:{class: 'ui form'} do |f| %>
+  <%= form_for @blog, url: admin_blogs_path, html:{class: 'ui form'} do |f| %>
     <div class="field">
       <%= f.label :title, '标题' %>
       <%= f.text_field :title, placeholder: '标题' %>

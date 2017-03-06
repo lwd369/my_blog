@@ -2,6 +2,6 @@ class Admin::DashboardController < ApplicationController
   before_action :require_login
 
   def index
-    render text: 'admin'
+    redirect_to new_admin_blog_path
   end
 end
