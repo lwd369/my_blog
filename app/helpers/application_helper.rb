@@ -16,7 +16,7 @@ module ApplicationHelper
   end
 
   def banner_image(blog)
-    return "http://oltnwd3eq.bkt.clouddn.com/#{blog.banner_image}" if blog.class == Blog && blog.banner_image.length != 0
+    return "http://oltnwd3eq.bkt.clouddn.com/#{blog.banner_image}" if blog.class == Blog && blog.banner_image.present?
     return image_url('banner.jpg')
   end
 
