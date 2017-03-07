@@ -12,6 +12,10 @@ class Admin::BlogsController < ApplicationController
     redirect_to root_path
   end
 
+  def uptoken
+      render json: {uptoken: get_qiniu_token}
+  end
+
   private
   def blog_paramas 
     params.require(:blog).permit(:title, :content, :banner_image)

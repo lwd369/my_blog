@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def blogs_new_page?(params)
-    if params[:controller] == 'blogs' && params[:action] == 'new'
+    if params[:controller] == 'admin/blogs' && params[:action] == 'new'
       return true
     end
     return false
@@ -32,7 +32,7 @@ module ApplicationHelper
       fenced_code_blocks: true
     }
 
-    markdown = Redcarpet::Markdown.new(HTMLwithCodeRay, extensions)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions)
 
     markdown.render(text).html_safe
   end

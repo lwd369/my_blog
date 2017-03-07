@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require semantic
 //= require cable
+//= require highlight.pack
 //= require_tree ./shared

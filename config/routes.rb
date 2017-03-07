@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to:'dashboard#index', as: 'root'
+    get '/uptoken', to: 'blogs#uptoken'
     resources :blogs
     resource :dashboard, only: [:index] do
       get '/status', action: 'status'
@@ -17,10 +18,6 @@ Rails.application.routes.draw do
       get '/uptoken', to: 'qiniu_manager#uptoken'
     end
   end
-
-  # resources :passwords,
-  #     controller: 'clearance/passwords',
-  #     only: [:create, :new]
 
     resource :session,
       controller: 'sessions',
