@@ -1,5 +1,26 @@
 (function() {
-  var simplemde = new SimpleMDE({ element: document.getElementById("markdown-editor"), spellChecker: false});
+	var isInsertImage = NO;	
+	var toolbar = [
+				"bold","italic","strikethrough", "|",
+				"heading-1", "heading-2", "heading-3" , "|",
+				"code", "quote", "clean-block","|",
+				"unordered-list", "ordered-list", "clean-block", "|",
+				"preview", "fullscreen", "side-by-side", "guide","|",
+				{
+							name: "image",
+							action: function customFunction (editor) {
+								$('#image-modal').toggleClass('hidden');
+							},
+							className: "fa fa-image",
+							title: "image"
+				}
+	];
+
+  var simplemde = new SimpleMDE({ 
+        element: document.getElementById("markdown-editor"),
+         spellChecker: false,
+         toolbar: toolbar
+      });
 
   $('#upload-btn, #cancel').on('click', function() {
     $('#image-modal').toggleClass('hidden');
@@ -47,16 +68,7 @@
                   console.log('UploadProgress');
             },
             'FileUploaded': function(up, file, info) {
-                  // 每个文件上传成功后，处理相关的事情
-                  // 其中info是文件上传成功后，服务端返回的json，形式如：
-                  // {
-                  //    "hash": "Fh8xVqod2MQ1mocfI4S4KpRL6D98",
-                  //    "key": "gogopher.jpg"
-                  //  }
-                  // 查看简单反馈
-                  // var domain = up.getOption('domain');
                    var res = $.parseJSON(info);
-                  // var sourceLink = domain +"/"+ res.key; 获取上传成功后的文件的Url
                   console.log(res.key);
                   $('#image-modal').toggleClass('hidden');
                   $('#banner-image-field').val(res.key);
